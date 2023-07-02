@@ -7,6 +7,7 @@ class CarriganTire(Tire):
 
 	def needs_service(self):
 		tires_worn=0
-		for x in tires:
-			tires_worn=+x
-		return tires_worn <= 3.6
+		for x in self.tires:
+			if x >= 0.9:
+				return True
+		return False
